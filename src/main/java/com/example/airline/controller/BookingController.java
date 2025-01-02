@@ -35,7 +35,7 @@ public class BookingController {
 	}
 	
 	@PostMapping
-	public Booking createBooking(@RequestBody Booking booking) {
+	public synchronized Booking createBooking(@RequestBody Booking booking) {
 		return bookingService.createBooking(booking);
 	}
 	
